@@ -2,7 +2,10 @@ module sqlite-golang
 
 go 1.20
 
-require github.com/mattn/go-sqlite3 v1.14.16
+require (
+	github.com/go-sql-driver/mysql v1.7.0
+	github.com/mattn/go-sqlite3 v1.14.16
+)
 
 require (
 	github.com/andybalholm/brotli v1.0.4 // indirect
