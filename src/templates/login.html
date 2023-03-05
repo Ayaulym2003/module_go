@@ -9,22 +9,27 @@
 <div class="hero">
     <p>Just do it with <strong>Nike</strong></p>
     <h2>Sign in to your account</h2>
-    <form action="/save_reg" method="post">
+    <form action="/save_log" method="post">
         <div class="form-box">
             <div class="card-box">
-                <input type="text" name="idtest" id="idtest" placeholder="Email address">
+                <input type="email" name="email" id="email" placeholder="Email address">
             </div>
             <div class="card-box">
-                <input type="text" name="testcol" id="testcol" placeholder="Password">
+                <input type="password" name="password" id="password" placeholder="Password">
             </div>
-            <h1>Forgot password?</h1>
             <div class="button">
                 <input type="submit" value="Log in">
             </div>
         </div>
     </form>
-
 </div>
+<br><br>
+<br><br>
+{{ if . }}
+<h1>
+    {{.}}
+</h1>
+{{end}}
 </body>
 </html>
 {{ end }}
