@@ -30,6 +30,12 @@ func index(w http.ResponseWriter, r *http.Request){
       t.ExecuteTemplate(w, "index", nil)
  }
 func save_reg(w http.ResponseWriter, r *http.Request){
+    t, err2 := template.ParseFiles("templates/register.html")
+       if err2 != nil {
+            fmt.Fprintf(w, err2.Error())
+       }
+    name := r.FormValue("name")
+    surname := r.FormValue("surname")
     email := r.FormValue("email")
     phone := r.FormValue("phone")
     password := r.FormValue("password")
@@ -41,9 +47,11 @@ func save_reg(w http.ResponseWriter, r *http.Request){
     }
     defer db.Close()
 
-    insert, err := db.Query(fmt.Sprintf("Insert into `register` (`email`, `phone`, `password`) Values ('%s', '%s', '%s')", email, phone, password))
+    insert, err := db.Query(fmt.Sprintf("Insert into `customer` (`name`, `surname`,`email_address`, `phone_number`, `password`) Values ('%s', '%s', '%s', '%s', '%s')", name, surname, email, phone, password))
     if err != nil {
-         panic(err)
+         fmt.Println("Ayaaau")
+         t.ExecuteTemplate(w, "register", "something is not right")
+         return
     }
     defer insert.Close()
 
@@ -65,7 +73,7 @@ func save_log(w http.ResponseWriter, r *http.Request){
     defer db.Close()
 
     var hash string
-    stmt := "SELECT password FROM register WHERE email = ?"
+    stmt := "SELECT password FROM customer WHERE email_address = ?"
     row := db.QueryRow(stmt, email)
     erro := row.Scan(&hash)
     fmt.Println("hash:", hash)

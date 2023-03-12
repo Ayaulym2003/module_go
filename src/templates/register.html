@@ -12,6 +12,12 @@
     <form action="/save_reg" method="post">
     <div class="form-box">
         <div class="card-box">
+            <input type="text" name="name" id="name" placeholder="Name">
+        </div>
+        <div class="card-box">
+            <input type="text" name="surname" id="surname" placeholder="Surname">
+        </div>
+        <div class="card-box">
             <input type="email" name="email" id="email" placeholder="Email address">
         </div>
         <div class="card-box">
@@ -26,6 +32,13 @@
     </div>
     </form>
 </div>
+<br><br>
+<br><br>
+{{ if . }}
+<h3>
+    {{.}}
+</h3>
+{{end}}
 </body>
 </html>
 {{ end }}

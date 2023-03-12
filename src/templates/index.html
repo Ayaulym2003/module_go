@@ -1,21 +1,146 @@
 {{ define "index" }}
 <!DOCTYPE html>
-<html>
+<html lang="en">
+
 <head>
-    <title>Log In</title>
-    <link rel="stylesheet" href="static/css/style.css">
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet"
+          integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="stylesheet" href="static/css/mpage.css">
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
 </head>
+
 <body>
-<div class="hero">
-    <p>Just do it with <strong>Nike</strong></p>
-    <a class="nav-link" href="/register" style="color: white;">Register page</a>
-    <a class="nav-link" href="/login" style="color: white;">Login page</a>
+<header>
+    <div class="topnav1">
+        <a class="nav-link" href="/register" style="color: white;">Register page</a>
+        <a href="">/</a>
+        <a class="nav-link" href="/login" style="color: white;">Login page</a>
+    </div>
+    <div class="topnav">
+        <img src="static/css/Vector.png" alt="">
+        <a href="#Men">Men</a>
+        <a href="#Women">Women</a>
+        <a href="#Kids">Kids</a>
+        <a href="#Costomize">Costomize</a>
+        <a href="#Sale">Sale</a>
+        <a href="#Shopping">Shopping</a>
+    </div>
+</header>
+<div class="topcontent">
+
+    <img class="center" src="static/css/THE NEW 2023.png" alt="">
+    <img class="center" src="static/css/AIR JORDAN.png" alt="">
+    <img class="centers" src="static/css/hero-product.png" alt="">
 </div>
-{{ if . }}
-<h2>
-    {{.}}
-</h2>
-{{end}}
+<div class="justdi">
+    <img class="article" src="static/css/Just do it.png" alt="">
+    <h6 style="margin-bottom: 5%;">Captures messages that stands for more than just sport. </h6>
+    <div class="cards">
+        <div class="card">
+            <img src="static/css/Rectangle 10.png" alt="">
+            <div class="centered">
+                <a href="">
+                    <h4>Newcomer</h4>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="static/css/Rectangle 7.png" alt="">
+            <div class="centered">
+                <a href="Men">
+                    <h4>Men</h4>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="static/css/Rectangle 8.png" alt="">
+            <div class="centered">
+                <a href="Women">
+                    <h4>Women</h4>
+                </a>
+            </div>
+        </div>
+        <div class="card">
+            <img src="static/css/Rectangle 9.png" alt="">
+            <div class="centered">
+                <a href="Kids">
+                    <h4>Kids</h4>
+                </a>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="featured">
+    <img class="article" src="static/css/Featured.png" alt="">
+    <h6 style="margin-bottom: 5%;">There are newest style of the season.</h6>
+    <img class="carousel" src="static/css/Group 3.png" alt="">
+</div>
+<div class="poppic">
+    <img class="title" src="static/css/Popular Picks.png" alt="">
+    <h6 style="margin-bottom: 5%;">Our popular picks for most favorited Nike Men’s & Women’s shoes.</h6>
+    <div style="display: flex;">
+        <img style="width: 31%;" src="static/css/Rectangle 13.png" alt="">
+        <img style="margin-left: 3%; width: 31%;" src="static/css/Rectangle 14.png" alt="">
+        <img style="margin-left: 3%; width: 31%;" src="static/css/Rectangle 15.png" alt="">
+    </div>
+</div>
+<div class="rda">
+    <div style="width: 55%;">
+        <img style="margin-top: 10%; margin-bottom: 5%; width: 40%;" src="static/css/Rewarding Days Ahead.png" alt="">
+        <h6 style="margin-bottom: 3%; width: 70%">More rewards for Members as we celebrate the</h6>
+        <h6 style="margin-bottom: 4%; width: 70%;">Nike App Anniversary.</h6>
+        <h6 style="margin-bottom: 3%; width: 70%;">From 02 - 07 Aug, stand a chance to score a pair</h6>
+        <h6 style="margin-bottom: 3%; width: 70%;">of Nike Air Max “all type” when you shop on the</h6>
+        <h6 style="margin-bottom: 4%; width: 70%;">Nike App.</h6>
+        <h6 style="margin-bottom: 5%; width: 70%;">Not a Nike Member?</h6>
+        <button class="btn warning" style="width: 20%;">Join now</button>
+    </div>
+    <div style="float: left; width: 45%;">
+        <img style="margin-top: 10%; width: 97%;" src="static/css/image 1.png" alt="">
+    </div>
+</div>
+<footer>
+    <div style="width: 15%;">
+        <h6 style="margin-left: 7%;">MENU</h6>
+        <a href="">FIND A STORE </a>
+        <a href="">BECOME A MEMBER </a>
+        <a href="">SIGN UP FOR EMAIL</a>
+        <a href="">STUDENT DISCOUNTS</a>
+        <a href="">SEND US FEEDBACK </a>
+    </div>
+    <div style="width: 15%;">
+        <h6 style="margin-left: 7%;">HELPDESK</h6>
+        <a href="">ORDER STATUS </a>
+        <a href="">DELIVERY </a>
+        <a href="">RETURNS </a>
+        <a href="">PAYMENT OPTIONS</a>
+        <a href="">CONTACT US </a>
+    </div>
+    <div style="width: 15%;">
+        <h6 style="margin-left: 7%;">ABOUT NIKE</h6>
+        <a href="">NEWS </a>
+        <a href="">CAREERS </a>
+        <a href="">INVESTORS </a>
+        <a href="">SUSTAINABILITY</a>
+    </div>
+    <div style="width: 35%;"></div>
+    <div style="width: 20%; float: right; text-align: right;">
+        <h6 style="margin: 7% 0% 10% 0%;">PRIMARY ADDRESS</h6>
+        <p>One Bowerman Drive</p>
+        <p>Beaverton, OR 97005-6453</p>
+        <p>USA</p>
+        <div style="margin: 10% 0% 10% 0%;">
+            <img src="static/css/eva_email-fill.png" alt="">
+            <img src="static/css/eva_facebook-fill.png" alt="">
+            <img src="static/css/eva_twitter-fill.png" alt="">
+        </div>
+        <p>© 2022 Nike, Inc. All Rights Reserved</p>
+    </div>
+</footer>
 </body>
+
 </html>
 {{ end }}

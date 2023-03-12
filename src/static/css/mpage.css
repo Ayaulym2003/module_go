@@ -1,0 +1,164 @@
+body {
+    background-color: black;
+  }
+
+  .topnav1 a {
+    float: right;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 10px 12px 10px 1px;
+    text-decoration: none;
+    font-size: 14px;
+  }
+
+  .topnav1 {
+    overflow: hidden;
+    background-color: #000000;
+  }
+
+  .topnav1 a:hover {
+    color: rgb(156, 156, 156);
+  }
+
+  .topnav {
+    overflow: hidden;
+    background-color: #000000;
+  }
+
+  .topnav img {
+    float: left;
+    height: 35px;
+    margin-left: 50px;
+    margin-top: 10px;
+  }
+
+  .topnav a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .topnav a:hover {
+    color: rgb(156, 156, 156);
+  }
+
+  .topcontent{
+    justify-content: center;
+  }
+
+  .featured{
+    text-align: center;
+    color: darkgray;
+  }
+
+  .justdi{
+    text-align: center;
+    color: darkgray;
+  }
+
+  .poppic{
+    color: darkgray;
+    margin: 5% 5% 5% 5%;
+    padding: 3%;
+    width: 90%;
+  }
+
+  .rda{
+    display: flex;
+    margin: 5% 5% 1% 5%;
+    padding: 3%;
+    color: darkgray;
+    width: 90%;
+  }
+
+  .center{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 90%;
+  }
+
+  .centers{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 70%;
+  }
+
+  .article{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 15%;
+  }
+  .title{
+    margin-top: 5%;
+    margin-bottom: 2%;
+    width: 20%;
+  }
+
+  .carousel{
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+  }
+
+  .cards{
+    display: flex;
+    margin-left: 4%;
+    margin-right: 4%;
+  }
+
+  .card{
+    width: 20%;
+    margin-left: 4%;
+    background-color: #000000;
+  }
+  .centered {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: #f2f2f2;
+  }
+  .card a {
+    float: left;
+    color: #f2f2f2;
+    text-align: center;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 17px;
+  }
+
+  .card a:hover {
+    color: rgb(156, 156, 156);
+  }
+
+  .warning {background-color: #c19c35;}
+  .warning:hover {background: #806c1d;}
+
+  footer{
+    background-color: #B4B9BC;
+    display: flex;
+    color: #f2f2f2;
+    padding: 5% 5% 5% 5%;
+  }
+  footer a{
+    float: left;
+    color: #ffffffe2;
+    padding: 14px 16px;
+    text-decoration: none;
+    font-size: 13px;
+  }
+   footer p{
+    font-size: 12px;
+   }
+
+
+

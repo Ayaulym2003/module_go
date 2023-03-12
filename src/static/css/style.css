@@ -59,6 +59,22 @@ h2{
     text-align: center;
     color: #A2A6A8;
 }
+h3{
+    position: absolute;
+    width: 414px;
+    height: 91px;
+    left: 155px;
+    top: 560px;
+
+    font-family: "Poppins",sans-serif;
+    font-style: normal;
+    font-weight: 500;
+    font-size: 15px;
+    line-height: 95px;
+    /* or 475% */
+    text-align: center;
+    color: #A2A6A8;
+}
 .form-box{
     padding: 150px;
     padding-top: 320px;
