@@ -1,4 +1,4 @@
-{{ define "products" }}
+{{ define "filter" }}
 <!DOCTYPE html>
 <html>
 <head>
@@ -7,7 +7,7 @@
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <meta name="viewport" content="width=device-width, initial-scale=1">
     <style>
-* {
+    * {
   box-sizing: border-box;
 }
 
@@ -15,51 +15,7 @@ body {
   font-family: Arial, Helvetica, sans-serif;
   background-color: black;
 }
-.column {
-  float: left;
-  width: 25%;
-  padding: 0 10px;
-}
 
-/* Remove extra left and right margins, due to padding */
-.row {
-   margin: 0 -5px;
-   }
-
-/* Clear floats after the columns */
-.row:after {
-  content: "";
-  display: table;
-  clear: both;
-}
-
-/* Responsive columns */
-@media screen and (max-width: 600px) {
-  .column {
-    width: 100%;
-    display: block;
-    margin-bottom: 20px;
-  }
-}
-
-/* Style the counter cards */
-.card {
-  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
-  padding: 16px;
-  margin-bottom: 30px;
-  text-align: center;
-  background-color: #f1f1f1;
-  height: 400px;
-}
-.as{
-    margin-left: 50px;
-    width: 200px;
-    height: 220px;
-}
-.as img{
-    width: 200px;
-    height: 220px;
-}
 .topnav1 a {
     float: right;
     color: #f2f2f2;
@@ -121,7 +77,6 @@ body {
    .ew{
    color: white;
    }
-   //------
    .topnav .search-container {
     float: right;
   }
@@ -175,6 +130,139 @@ body {
     }
   }
 
+
+
+
+  .column {
+  float: left;
+  width: 25%;
+  padding: 0 10px;
+}
+/* Remove extra left and right margins, due to padding */
+.row {
+   margin: 0 -5px;
+   }
+
+/* Clear floats after the columns */
+.row:after {
+  content: "";
+  display: table;
+  clear: both;
+}
+
+/* Responsive columns */
+@media screen and (max-width: 600px) {
+  .column {
+    width: 100%;
+    display: block;
+    margin-bottom: 20px;
+  }
+}
+
+/* Style the counter cards */
+.card {
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+  padding: 16px;
+  margin-bottom: 30px;
+  text-align: center;
+  background-color: #f1f1f1;
+  height: 400px;
+}
+.as{
+    margin-left: 50px;
+    width: 200px;
+    height: 220px;
+}
+.as img{
+    width: 200px;
+    height: 220px;
+}
+label{
+    color: white;
+}
+h4{
+    color: white;
+
+}
+
+.filter-container{
+  width: 250px;
+  flex-wrap: wrap;
+  margin-bottom: 30px;
+
+}
+.filter-container h4{
+  margin-left: 50px;
+  border-radius: 20px;
+  transition: 0.3s;
+}
+input[type=checkbox] + label{
+  margin-left: 100px;
+  cursor: pointer;
+  padding: 0.05em;
+}
+input[type=checkbox]{
+  display: none;
+}
+input[type=checkbox] + label:before{
+  content:"\2714";
+  border: 0.1em solid #ffffff;
+  border-radius: 0.2em;
+  display: inline-block;
+  width: 1.2em;
+  height: 1.2em;
+  padding-left: 0.1em;
+  padding-bottom: 0.3em;
+  margin-right: 0.3em;
+  vertical-align: bottom;
+  color: transparent;
+  transition: .2s;
+}
+input[type=checkbox] + label:active:before{
+  transform: scale(0);
+}
+input[type=checkbox]:checked + label:before{
+  background-color: #2e16e474;
+  border-color: #2e16e474;
+  color: #000000;
+}
+input[type=checkbox]:checked + label{
+  color: #2e16e474;
+}
+.filter-container button{
+  color: #ffffff;
+  padding: 5px 20px;
+  margin-top: 12px;
+  margin-left: 130px;
+  background: #2e16e474;
+  font-size: 17px;
+  border: none;
+  cursor: pointer;
+  border-radius: 22px;
+}
+.price{
+  margin-left: 78px;
+}
+.price input[type=number]{
+  background-color: #2e16e474;
+  width: 150px;
+  border: 3px solid white;
+  border-radius: 5px;
+  color: rgb(255, 255, 255);
+  margin: 10px;
+}
+.price label{
+  position: absolute;
+  left: 15px;
+  transition: all .8s ease;
+  font-size: 14px;
+  pointer-events: none;
+  margin-top: -12px;
+  transition: all .8s ease;
+  color: rgb(255, 255, 255);
+  padding-left: 100px;
+}
+
 </style>
 </head>
 <body>
@@ -202,9 +290,28 @@ body {
         </div>
     </div>
 </header>
+
+
+<form action="/filter_filter">
+    <div class ="filter-container">
+        <h4>Price: </h4>
+        <div class="price">
+            <label for="Min">Minimum Price:</label>
+            <input type="number" name="minval" tabindex="" value="0" max="100000" min="0" step="1" placeholder="0"/>
+            <label for="Max">Maximum Price:</label>
+            <input type="number" name="maxval" tabindex="" value="1000000" max="1000000" min="0" step="1" placeholder="1000000"/>
+        </div>
+        <h4>Rating: </h4>
+        <input type="range" name="rating" min="0" max="5" value="0" style="margin-left: 90px;">
+        <button type="submit">Filter</button>
+    </div>>
+</form>
+
+
+
 {{ if . }}
 <div class="row">
-       {{ range . }}
+    {{ range . }}
     <div class="column">
         <div class="card">
             <img class="as" src="static/css/{{.Photo}}" alt="">
@@ -217,6 +324,10 @@ body {
     {{ end }}
 </div>
 {{ end }}
+
+
+
+
 
 <footer>
     <div style="width: 15%;">
