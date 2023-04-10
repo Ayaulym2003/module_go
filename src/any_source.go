@@ -10,7 +10,7 @@ import (
 var db *sql.DB
 
 type Products struct {
-    Product_id int
+    Product_id int64 `orm:"pk" json:"Product_id"`
     Category_id int
     Product_name string
     Price int
@@ -42,6 +42,13 @@ func register(w http.ResponseWriter, r *http.Request){
        }
       t.ExecuteTemplate(w, "register", nil)
  }
+func desc(w http.ResponseWriter, r *http.Request){
+       t, err := template.ParseFiles("templates/desc.html")
+              if err != nil {
+                   fmt.Fprintf(w, err.Error())
+              }
+             t.ExecuteTemplate(w, "desc", nil)
+  }
 func index(w http.ResponseWriter, r *http.Request){
       t, err := template.ParseFiles("templates/index.html")
        if err != nil {
@@ -243,6 +250,7 @@ func search(w http.ResponseWriter, r *http.Request){
 
 
 func handleFunc (){
+
     http.Handle("/static/", http.StripPrefix("/static/", http.FileServer(http.Dir("./static/"))))
     http.HandleFunc("/", index)
     http.HandleFunc("/login", login)
@@ -251,12 +259,12 @@ func handleFunc (){
     http.HandleFunc("/save_reg", save_reg)
     http.HandleFunc("/logout", logout)
     http.HandleFunc("/filter", filter)
+    http.HandleFunc("/desc", desc)
     http.HandleFunc("/filter_filter", filter_filter)
     http.HandleFunc("/save_log", save_log)
     http.HandleFunc("/search", search)
     http.ListenAndServe(":8080", nil)
 }
-
 func main() {
     handleFunc()
     fmt.Println("dvfjdf")
