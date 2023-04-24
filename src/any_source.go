@@ -497,7 +497,6 @@ func comment(w http.ResponseWriter, r *http.Request){
                                x := make(map[string]interface{})
                                x["prods"] = prods
                                x["prod"] = proda
-
                                t.ExecuteTemplate(w, "desc", x)
     }
 
